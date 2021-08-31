@@ -8486,9 +8486,9 @@
           }
         ]
       },
-      "InverterEfficiencyCEC": {
+      "InverterEfficiencyCECTestResult": {
         "type": "object",
-        "description": "CEC Measured Efficiency Values",
+        "description": "CEC measured efficiency values at maximum, nominal and minimum voltage levels and specified input power",
         "properties": {
           "EfficiencyCECVoltageMax": {
             "$ref": "#/components/schemas/EfficiencyCECVoltageMax"
@@ -8504,10 +8504,10 @@
           }
         }
       },
-      "InverterEfficienciesCEC": {
+      "InverterEfficiencyCECTestResults": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/InverterEfficiencyCEC"
+          "$ref": "#/components/schemas/InverterEfficiencyCECTestResult"
         }
       },
       "EfficiencyCECVoltageMax": {
@@ -8517,7 +8517,7 @@
           },
           {
             "type": "object",
-            "description": "DC/AC conversion efficiency at PTC at Vmax",
+            "description": "DC/AC conversion efficiency at Vmax and specified DC input power",
             "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -8535,7 +8535,7 @@
           },
           {
             "type": "object",
-            "description": "DC/AC conversion measured conversion efficiency measured at PTC at Vmin",
+            "description": "DC/AC conversion efficiency at Vmin and specified DC input power",
             "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -8553,7 +8553,7 @@
           },
           {
             "type": "object",
-            "description": "DC/AC conversion efficiency measured at PTC at Vnom",
+            "description": "DC/AC conversion efficiency at Vnom and specified DC input power",
             "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -8567,11 +8567,11 @@
       "PowerLevelCECTest": {
         "allOf": [
           {
-            "$ref": "#/components/schemas/TaxonomyElementInteger"
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
-            "description": "DC input power for CEC Efficiency test",
+            "description": "DC input power for CEC efficiency test",
             "x-ob-item-type": "num:powerItemType",
             "x-ob-item-type-group": "OBElectricalPower",
             "x-ob-usage-tips": "",
@@ -8649,8 +8649,8 @@
           "InverterEfficiencyMax": {
             "$ref": "#/components/schemas/InverterEfficiencyMax"
           },
-          "CECInverterEfficiencies": {
-            "$ref": "#/components/schemas/CECInverterEfficiencies"
+          "InverterEfficiencyCECTestResults": {
+            "$ref": "#/components/schemas/InverterEfficiencyCECTestResults"
           }
         }
       },
