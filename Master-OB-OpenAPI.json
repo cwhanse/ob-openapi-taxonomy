@@ -7274,8 +7274,8 @@
               "VoltageDCInputNom": {
                 "$ref": "#/components/schemas/VoltageDCInputNom"
               },
-              "EfficiencyInverter": {
-                "$ref": "#/components/schemas/EfficiencyInverter"
+              "InverterEfficiency": {
+                "$ref": "#/components/schemas/InverterEfficiency"
               },
               "InverterInput": {
                 "$ref": "#/components/schemas/InverterInput"
@@ -8486,7 +8486,7 @@
           }
         ]
       },
-      "CECInverterEfficiency": {
+      "InverterEfficiencyCEC": {
         "type": "object",
         "description": "CEC Measured Efficiency Values",
         "properties": {
@@ -8504,10 +8504,10 @@
           }
         }
       },
-      "CECInverterEfficiencies": {
+      "InverterEfficienciesCEC": {
         "type": "array",
         "items": {
-          "$ref": "#/components/schemas/CECInverterEfficiency"
+          "$ref": "#/components/schemas/InverterEfficiencyCEC"
         }
       },
       "EfficiencyCECVoltageMax": {
@@ -8517,7 +8517,7 @@
           },
           {
             "type": "object",
-            "description": "DC/AC Conversion Efficiency at PTC at Vmax",
+            "description": "DC/AC conversion efficiency at PTC at Vmax",
             "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -8553,7 +8553,7 @@
           },
           {
             "type": "object",
-            "description": "DC/AC Conversion Efficiency measured at PTC at Vnom",
+            "description": "DC/AC conversion efficiency measured at PTC at Vnom",
             "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -8582,7 +8582,7 @@
           }
         ]
       },
-      "EfficiencyInverterIEC": {
+      "InverterEfficiencyIEC": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
@@ -8600,7 +8600,7 @@
           }
         ]
       },
-      "EfficiencyInverterCEC": {
+      "InverterEfficiencyCEC": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
@@ -8618,14 +8618,14 @@
           }
         ]
       },
-      "EfficiencyInverterMax": {
+      "InverterEfficiencyMax": {
         "allOf": [
           {
             "$ref": "#/components/schemas/TaxonomyElementNumber"
           },
           {
             "type": "object",
-            "description": "Manufacturer Max DC/AC Conversion Efficiency",
+            "description": "Manufacturer's stated maximum DC/AC conversion efficiency",
             "x-ob-item-type": "percentItemType",
             "x-ob-item-type-group": "",
             "x-ob-usage-tips": "",
@@ -8636,18 +8636,18 @@
           }
         ]
       },
-      "EfficiencyInverter": {
+      "InverterEfficiency": {
         "type": "object",
-        "description": "Measurements of DC/AC Conversion Efficiency",
+        "description": "Measurements of DC/AC conversion efficiency",
         "properties": {
-          "EfficiencyInverterCEC": {
-            "$ref": "#/components/schemas/EfficiencyInverterCEC"
+          "InverterEfficiencyCEC": {
+            "$ref": "#/components/schemas/InverterEfficiencyCEC"
           },
-          "EfficiencyInverterIEC": {
-            "$ref": "#/components/schemas/EfficiencyInverterIEC"
+          "InverterEfficiencyIEC": {
+            "$ref": "#/components/schemas/InverterEfficiencyIEC"
           },
-          "EfficiencyInverterMax": {
-            "$ref": "#/components/schemas/EfficiencyInverterMax"
+          "InverterEfficiencyMax": {
+            "$ref": "#/components/schemas/InverterEfficiencyMax"
           },
           "CECInverterEfficiencies": {
             "$ref": "#/components/schemas/CECInverterEfficiencies"
