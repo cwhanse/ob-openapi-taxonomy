@@ -8669,6 +8669,12 @@
           },
           "VoltageDCInputInverterStart": {
             "$ref": "#/components/schemas/VoltageDCInputInverterStart"
+          },
+          "InverterInputMPPTNumber": {
+            "$ref": "#/components/schemas/InverterInputMPPTNumber"
+          },
+          "InverterMPPTs": {
+            "$ref": "#/components/schemas/InverterMPPTs"
           }
         }
       },
@@ -8959,6 +8965,123 @@
             "x-ob-sample-value": ""
           }
         ]
+      },
+      "InverterMPPT": {
+        "type": "object",
+        "description": "An object of elements to describe an inverter maximum power point tracker (MPPT)",
+        "properties": {
+          "CurrentShortCircuitMax": {
+            "$ref": "#/components/schemas/CurrentShortCircuitMax"
+          },
+          "VoltageMPPTMax": {
+            "$ref": "#/components/schemas/VoltageMPPTMax"
+          },
+          "VoltageMPPTMin": {
+            "$ref": "#/components/schemas/VoltageMPPTMin"
+          },
+          "CurrentDCMax": {
+            "$ref": "#/components/schemas/CurrentDCMax"
+          },
+          "InverterMPPTInputStrings": {
+            "$ref": "#/components/schemas/InverterMPPTInputStrings"
+          }
+        }
+      },
+      "CurrentDCMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum DC current of a device",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "CurrentShortCircuitMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum short circuit current of a device",
+            "x-ob-item-type": "num-us:electricCurrentItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "InverterMPPTInputStrings": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "The number of parallel input strings for an inverter MPPT",
+            "x-ob-item-type": "xbrli:integerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "VoltageMPPTMax": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Maximum of the voltage range for an inverter MPPT",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "VoltageMPPTMin": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementNumber"
+          },
+          {
+            "type": "object",
+            "description": "Minimum of the voltage range for an inverter MPPT",
+            "x-ob-item-type": "num-us:voltageItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "InverterInputMPPTNumber": {
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/TaxonomyElementInteger"
+          },
+          {
+            "type": "object",
+            "description": "Number of MPPT inputs for an inverter",
+            "x-ob-item-type": "xbrli:integerItemType",
+            "x-ob-item-type-group": "",
+            "x-ob-usage-tips": "",
+            "x-ob-sample-value": ""
+          }
+        ]
+      },
+      "InverterMPPTs": {
+        "type": "array",
+        "items": {
+          "$ref": "#/components/schemas/InverterMPPT"
+        }
       }
     }
   },
